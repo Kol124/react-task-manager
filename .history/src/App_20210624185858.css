@@ -1,0 +1,250 @@
+@import url("fonts.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(100deg, #f1f1f1 50%, #e5e5e5 0);
+}
+
+.app-wrapper {
+  padding: 2.5rem 2.8rem;
+  position: relative;
+  width: 45rem;
+  height: 65rem;
+  border-radius: 5px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.header .main-header {
+  font-family: "Josefin Slab", serif;
+  text-align: center;
+  font-size: 3.3rem;
+  font-weight: 300;
+  margin: 2.5rem 2rem 5rem 2rem;
+}
+
+/* THEME TOGGLE BUTTON */
+#toggle-btn {
+  position: relative;
+  width: 25px;
+  height: 12px;
+  border-radius: 40px;
+  margin: 0 1rem 0 auto;
+}
+
+input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+  margin: 0px;
+  opacity: 0;
+  z-index: 2;
+}
+
+#toggle-btn span {
+  background-color: #fff;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: 0.2s ease background-color, 0.2s ease opacity;
+}
+
+#toggle-btn:hover {
+  box-shadow: 0px 2px 25px #d9d9d9;
+}
+
+#toggle-btn span:before,
+#toggle-btn span:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: 0.5s ease transform, 0.2s ease background-color;
+}
+
+#toggle-btn span:after {
+  background-color: #292f38;
+  transform: translate(2px, 0px);
+  z-index: 0;
+}
+
+#toggle-btn input[type="checkbox"]:checked + span {
+  background-color: #1d222b;
+}
+
+#toggle-btn input[type="checkbox"]:checked + span:after {
+  background-color: #d4d4d4;
+  transform: translate(13px, 0px);
+}
+/* THEME TOGGLE BUTTON COMPLETED */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  margin-bottom: 3.5rem;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.task-input {
+  font-family: "Josefin Sans", serif;
+  padding: 1.5rem 1rem 1rem 2rem;
+  margin: 0 auto 1rem auto;
+  color: #ccc;
+  width: 95%;
+  outline: none;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+  display: flex;
+}
+
+.btn {
+  font-family: "Montserrat", sans-serif;
+  background-color: #1d222b;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  height: 3.5rem;
+  width: 10rem;
+  border: none;
+  margin: 1rem;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.list {
+  width: 95%;
+  margin: 0 auto;
+  max-height: 28rem;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #d3d3d3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #292f38;
+  border-radius: 10px;
+}
+
+.list-item {
+  display: flex;
+  margin: 2rem 0;
+  padding-bottom: 0.5rem;
+  justify-content: space-between;
+}
+
+.list-item span {
+  font-family: "Josefin Sans", sans-serif;
+  /* color: #bbb; */
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.task-btn {
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-right: 2rem;
+  background-color: transparent;
+}
+
+.no-tasks {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 2.5rem;
+  font-size: 2rem;
+}
+
+footer {
+  position: absolute;
+  width: 85%;
+  bottom: 6%;
+}
+
+footer .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 1.4rem;
+  list-style: none;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.nav li {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+}
+
+.nav li a {
+  text-decoration: none;
+}
+
+.nav li i {
+  font-size: 2.5rem;
+  transition: all ease 0.3s;
+}
+
+.nav li i:hover {
+  color: #182741;
+}
+
+.nav li p {
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: initial;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
