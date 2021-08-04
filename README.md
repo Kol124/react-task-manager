@@ -1,9 +1,15 @@
 # React Task Manager
 
-This react app contains two sections, the first section includes a todo list you add and also edit, the second section contains an expense tracker that allows you add expenses and track your spending
+**This app contains two sections.**
+
+The first section contains a todo list that allows adding and editing existing todo list items.
+
+The second section contains an expense tracker to add expenses and track your spending.
 
 ### Features
 
-React Context API and Hooks are heavily used along with react router.
+**React Context API and Hooks** are used for state management.
 
-JavaScript Calculations and String methods are also used. App
+**React Router.**
+
+**JavaScript  arithmetic calculations and string manipulation methods.**
