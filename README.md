@@ -2,6 +2,8 @@
 
 <!-- ## [Demo](https://react-task-manager-application.herokuapp.com/) -->
 <a href="https://react-task-manager-application.herokuapp.com/" target="_blank"><h2>Demo<a>
+  
+<img src="public/screen.png" alt="Screen Shot" />
 
 ### This app contains two sections.
 
